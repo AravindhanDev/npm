@@ -1,0 +1,148 @@
+npm - node package manager
+it is package manager of javascript
+
+what is package manager? 
+
+problem => code
+same problem  => reuse the code
+
+reusable code = modules
+it is single module
+
+reusable code + reusable code + reusable code + package.json = package
+it is collection of module including package.json file
+
+
+                                        Developer B
+reusable code -----  npm registry       Developer C
+                                        Developer D
+Developer A
+
+
+Developer A publish the reusable code and other Developers who are facing
+the same problem by just reuse the code as module
+
+If we update them npm gives easy way to notify the dependent Developers
+of Developer A module
+
+basically, it is the way to share your code with other Developers and
+reuse the code from other Developers and easily manage the different
+version of your code.
+
+npm init || npm init --yes    for creating package.json file
+
+******************** how to set default name and license ********************
+
+npm config set init-author-name "Noobie"
+npm set init-license "MIT"
+
+******************** how to get default name and license ********************
+
+npm config get init-author-name
+npm get init-license
+
+******************** how to delete default values ********************
+
+npm config delete init-license
+npm config delete init-author-name
+
+
+******************** how to install packages locally ********************
+
+npm install [command name]   ||    npm i [command name]
+but it not save as dependencies in package.json
+
+so,  
+npm install [command name] --save
+now it is add as dependencies in package.json
+
+
+BUT, nowadays
+
+it it not need to add --save flag because its 
+add by default
+
+******************** how to install dev dependencies ********************
+
+npm install [command name] --save-dev
+
+
+******************** how to uninstall package ********************
+
+npm uninstall moment  ||   npm un moment  ||  npm rm moment   are same
+
+
+********************  installing global packages  ********************
+
+npm install moment -g 
+it install moment globally
+
+********************  uninstalling global packages ********************
+
+npm uninstall moment -g
+it uninstall moment globally
+
+
+********************  how to listing packages ********************
+
+npm list
+
+also mention depth
+
+npm list --depth 0
+it will only display packages
+
+also globally
+npm list --global --depth 0
+
+******************** NPM Versioning ********************
+
+npm install lodash 
+
+******************** how to update packages ********************
+
+npm update lodash
+
+to update all package
+
+npm update 
+
+npm update -g
+
+******************** NPM Prune ********************
+
+npm prune - which is used to remove all extraneous packages
+which is in npm list but not in dependencies
+
+
+******************** NPM shortcuts ********************
+
+npm init -y  same as npm init --yes
+
+npm i lodash same as npm install lodash
+
+npm i lodash --save as npm i lodash -S
+
+npm i lodash --save-dev same as npm i lodash -D
+
+npm --global same as npm -g
+
+npm --version same as npm -v
+
+npm --help same as npm -h
+
+
+******************** NPM scripts ********************
+
+replace it from script
+
+"test" by "start"
+
+"value" by "node app.js"
+
+save it and type npm start
+
+it will execute like node app.js
+ 
+
+
